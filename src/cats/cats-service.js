@@ -33,7 +33,16 @@ let people = new People()
 
 const catsService = {
   getCat(name) {
-    return cats.getNext(name);
+    let temp= cats.getNext(name);
+    return {
+      name: temp.name,
+      sex: temp.sex,
+      age: temp.age,
+      breed: temp.breed,
+      imgURL: temp.imgURL,
+      imgDesc: temp.imgDesc,
+      story: temp.story,
+    }
   },
   deleteCat() {
     if (cats.getNext()) {

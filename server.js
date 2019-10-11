@@ -1,8 +1,13 @@
 const express = require('express');
 const cors = require('cors');
+const catRouter = require('./src/cats/cats-router')
+const dogRouter = require('./src/dogs/dog-router')
 
 const app = express();
 app.use(cors());
+
+app.use('/cats', catRouter)
+app.use('/dogs', dogRouter)
 
 // Catch-all 404
 app.use(function (req, res, next) {
@@ -10,6 +15,8 @@ app.use(function (req, res, next) {
   err.status = 404;
   next(err);
 });
+
+
 
 // Catch-all Error handler
 // Add NODE_ENV check to prevent stacktrace leak

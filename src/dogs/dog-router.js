@@ -1,7 +1,6 @@
 const express = require("express");
 const dogRouter = express.Router();
 const dogsService = require("./dog-service");
-const jsonParser = express.json();
 
 dogRouter
   .route("/")

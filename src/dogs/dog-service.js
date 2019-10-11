@@ -5,8 +5,8 @@ dogs.enqueue({
   name: "Sunny",
   age: "15",
   breed: "golden doodle",
-  imgURL: "null",
-  imgDesc: "null",
+  imgURL: "https://www.thesprucepets.com/thmb/PkUlkF8p89UYmug-etoLkixX1aU=/3920x2580/filters:fill(auto,1)/running-goldendoodle-121536291-0f6c9dfc9e184e078ab4163a8d420fd1.jpg",
+  imgDesc: "playful dog in grass",
   story: "loved very much",
   sex: "male"
 });
@@ -14,8 +14,8 @@ dogs.enqueue({
   name: "Jerico",
   age: "1",
   breed: "golden retriever",
-  imgURL: "null",
-  imgDesc: "null",
+  imgURL: "https://www.dogbreedslist.info/uploads/allimg/dog-pictures/Golden-Retriever-2.jpg",
+  imgDesc: "good boy stares at camera",
   story: "loved very much",
   sex: "female"
 });
@@ -23,8 +23,8 @@ dogs.enqueue({
   name: "Raptor",
   age: "7",
   breed: "husky",
-  imgURL: "null",
-  imgDesc: "null",
+  imgURL: "https://www.thesprucepets.com/thmb/LkPSN5w13M0iYTkztuYjCTorh6g=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/husky-dog-lying-in-the-915124768-34493760df9648f99961b50a16c39529.jpg",
+  imgDesc: "Husky lying in snow",
   story: "loved very much",
   sex: "male"
 });

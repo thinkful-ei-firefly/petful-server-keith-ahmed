@@ -19,5 +19,9 @@ catsRouter
     return res.json(cats)
   })
 
+  catsRouter.route("/all").get((req, res) => {
+    res.status(200).json(catsService.getAll());
+  });
+
 
 module.exports = catsRouter

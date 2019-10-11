@@ -61,18 +61,25 @@ class Queue {
       node = node.next;
     }
   }
-  getNext(name) {
-    if (!name) {
-      return this.first;
-    } else {
-      let node = this.first;
-      while (node !== null) {
-        if ((node.name = name && node.next)) {
-          return node.next;
-        }
-      }
-      return null
+  getNext() {
+    return this.first
+  }
+  getAll(){
+    let node = this.first
+    let arr = []
+    while(node !== null){
+      arr.push({
+        name: node.name,
+        age: node.age,
+        sex: node.sex,
+        breed: node.breed,
+        story: node.story,
+        imgDesc: node.imgDesc,
+        imgURL: node.imgURL
+      })
+      node = node.next
     }
+    return arr
   }
 }
 

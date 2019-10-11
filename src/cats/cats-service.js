@@ -1,5 +1,5 @@
 const Queue = require("../pets");
-const People = require('../peopleQueue')
+const People = require("../peopleQueue");
 let cats = new Queue();
 cats.enqueue({
   name: "Prince",
@@ -29,11 +29,11 @@ cats.enqueue({
   sex: "male"
 });
 
-let people = new People()
+let people = new People();
 
 const catsService = {
-  getCat(name) {
-    let temp= cats.getNext(name);
+  getCat() {
+    let temp = cats.getNext();
     return {
       name: temp.name,
       sex: temp.sex,
@@ -41,17 +41,20 @@ const catsService = {
       breed: temp.breed,
       imgURL: temp.imgURL,
       imgDesc: temp.imgDesc,
-      story: temp.story,
-    }
+      story: temp.story
+    };
+  },
+  getAll() {
+    return cats.getAll();
   },
   deleteCat() {
     if (cats.getNext()) {
-      people.dequeue()
+      people.dequeue();
       return cats.dequeue();
     }
   },
-  joinQueue(name){
-    people.enqueue(name)
+  joinQueue(name) {
+    people.enqueue(name);
   }
 };
 

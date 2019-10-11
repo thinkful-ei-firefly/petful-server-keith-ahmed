@@ -75,6 +75,9 @@ class People {
     }
     return i
   }
+  getNext(){
+    return this.first.name
+  }
 }
 
 module.exports = People

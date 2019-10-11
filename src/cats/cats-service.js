@@ -1,5 +1,6 @@
 const Queue = require("../pets");
-const People = require("../peopleQueue");
+const peopleService = require('../people-service')
+
 let cats = new Queue();
 cats.enqueue({
   name: "Prince",
@@ -29,7 +30,6 @@ cats.enqueue({
   sex: "male"
 });
 
-let people = new People();
 
 const catsService = {
   getCat() {

@@ -2,10 +2,13 @@ const express = require('express')
 const catsService = require('./cats-service')
 const dogsService = require("../dogs/dog-service");
 const catsRouter = express.Router()
+const jsonBodyParser = express.json()
 
 catsRouter
   .route('/')
-  .get((req, res) => {
+  .get(jsonBodyParser, (req, res) => {
+    let {user} = req.body.user
+    
     res.status(200).json({cat: catsService.getCat(), dog: dogsService.getDog()})
   })
   .delete((req, res, next) => {

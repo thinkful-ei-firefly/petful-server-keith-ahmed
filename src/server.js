@@ -1,12 +1,17 @@
 const express = require('express');
 const cors = require('cors');
-const catRouter = require('./src/cats/cats-router')
-const dogRouter = require('./src/dogs/dog-router')
+const CatsRouter = require('./cats/CatsRouter');
+const DogsRouter = require('./dogs/DogsRouter');
+const AdoptersRouter = require('./adopters/AdoptersRouter');
 
+const {PORT} = require('./config');
 const app = express();
 app.use(cors());
 
-app.use('/', catRouter)
+app.use('/api/cats', CatsRouter);
+app.use('/api/dogs', DogsRouter);
+app.use('/api/adopters', AdoptersRouter);
+
 
 // Catch-all 404
 app.use(function (req, res, next) {
@@ -14,8 +19,6 @@ app.use(function (req, res, next) {
   err.status = 404;
   next(err);
 });
-
-
 
 // Catch-all Error handler
 // Add NODE_ENV check to prevent stacktrace leak
@@ -27,6 +30,6 @@ app.use(function (err, req, res, next) {
   });
 });
 
-app.listen(8080,()=>{
+app.listen(PORT,()=>{
   console.log('Serving on 8080');
 });

@@ -2,7 +2,6 @@ const { Queue } = require('../queue');
 
 let cats = new Queue();
 
-
 cats.enqueue({
   image:"https://geniusvets.s3.amazonaws.com/gv-cat-breeds/Persian-1.jpg",
   name: 'Prince',
@@ -37,7 +36,7 @@ const CatService = {
     return this.cats;
   },
   adoptCat() {
-    cats.dequeue();
+cats.dequeue();
     return cats;
   }, 
 

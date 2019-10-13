@@ -1,7 +1,6 @@
 const { Queue } = require('../queue');
 
 let dogs = new Queue();
-
 dogs.enqueue({
   image:
     'https://www.thesprucepets.com/thmb/PkUlkF8p89UYmug-etoLkixX1aU=/3920x2580/filters:fill(auto,1)/running-goldendoodle-121536291-0f6c9dfc9e184e078ab4163a8d420fd1.jpg',
@@ -29,7 +28,6 @@ dogs.enqueue({
   story: 'Loved very much'
 });
 
-
 const DogService = {
   dogs,
 
@@ -38,7 +36,7 @@ const DogService = {
   },
 
   adoptDog() {
-    dogs.dequeue();
+dogs.dequeue();
     return dogs;
   },
 

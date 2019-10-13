@@ -10,7 +10,7 @@ const AdoptersRouter = require('./adopters/AdoptersRouter');
 
 
 const app = express();
-const morganOption = (process.env.NODE_ENV === 'production') // For server side logs
+const morganOption = (process.env.NODE_ENV === 'production')
   ? 'tiny'
   : 'common';
   app.use(cors({ origin: CLIENT_ORIGIN }));
